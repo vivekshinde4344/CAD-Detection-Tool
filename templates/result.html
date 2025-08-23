@@ -1,0 +1,28 @@
+<!-- templates/result.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diagnosis Result - CAD</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/result.css') }}">
+
+</head>
+<body>
+    <nav class="navbar">
+        <span>Logged in as: <strong>{{ username }}</strong></span>
+        <a href="/logout" class="logout-btn">Logout</a>
+    </nav>
+
+    <div class="container">
+        <h2>Your Test Result</h2>
+        <div class="result-box">
+            <p>{{ prediction }}</p>
+        </div>
+        <div style="text-align: center;">
+            <a href="/test" class="test-btn">Take Another Test</a>
+            <a href="/home" class="test-btn" style="background-color:#17a2b8;">Go to Home</a>
+        </div>
+    </div>
+</body>
+</html>

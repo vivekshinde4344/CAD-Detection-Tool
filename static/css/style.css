@@ -1,0 +1,57 @@
+/* Body background and font */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #007BFF;
+    color: white;
+    padding: 15px 30px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logout-btn {
+    color: white;
+    text-decoration: none;
+    background-color: #dc3545;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+.logout-btn:hover {
+    background-color: #bd2130;
+}
+
+/* Buttons */
+.test-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.test-btn:hover {
+    background-color: #218838;
+}
+
+/* Form headings */
+h2 {
+    text-align: center;
+    color: #333;
+}
+

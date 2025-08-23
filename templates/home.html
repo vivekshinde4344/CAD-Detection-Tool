@@ -1,0 +1,26 @@
+<!-- templates/home.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home - CAD Diagnosis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+
+</head>
+<body>
+    <nav class="navbar">
+        <span>Welcome, <strong id="username">{{ username }}</strong></span>
+        <a href="/logout" class="logout-btn">Logout</a>
+    </nav>
+
+    <div class="container">
+        <h2>Coronary Artery Disease Diagnosis</h2>
+        <p>Click below to begin your health screening:</p>
+        <a href="/test" class="test-btn">Take a Test</a>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/home.js') }}"></script>
+
+</body>
+</html>

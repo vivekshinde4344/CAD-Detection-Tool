@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Take a Test - CAD Diagnosis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/test.css') }}">
+
+</head>
+<body>
+    <nav class="navbar">
+        <span>Logged in as: <strong id="username">{{ username }}</strong></span>
+        <a href="/logout" class="logout-btn">Logout</a>
+    </nav>
+
+    <div class="container">
+        <h2>Health Test Form</h2>
+        <form method="POST" action="/predict" id="testForm">
+            <label>Age:</label>
+            <input type="number" name="age" required>
+
+            <label>Sex (0 = female, 1 = male):</label>
+            <input type="number" name="sex" min="0" max="1" required>
+
+            <label>Chest Pain Type (0–3):</label>
+            <input type="number" name="cp" min="0" max="3" required>
+
+            <label>Resting Blood Pressure:</label>
+            <input type="number" name="trestbps" required>
+
+            <label>Serum Cholesterol (mg/dl):</label>
+            <input type="number" name="chol" required>
+
+            <label>Fasting Blood Sugar > 120 mg/dl (0 = No, 1 = Yes):</label>
+            <input type="number" name="fbs" min="0" max="1" required>
+
+            <label>Resting ECG Results (0–2):</label>
+            <input type="number" name="restecg" min="0" max="2" required>
+
+            <label>Max Heart Rate Achieved:</label>
+            <input type="number" name="thalach" required>
+
+            <label>Exercise Induced Angina (0 = No, 1 = Yes):</label>
+            <input type="number" name="exang" min="0" max="1" required>
+
+            <label>Oldpeak (ST depression):</label>
+            <input type="number" step="0.1" name="oldpeak" required>
+
+            <label>Slope of ST Segment (0–2):</label>
+            <input type="number" name="slope" min="0" max="2" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/test.js') }}"></script>
+
+</body>
+</html>
